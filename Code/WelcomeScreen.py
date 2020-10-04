@@ -12,7 +12,7 @@ def on_draw():
     label.draw()
 
 @window.event
-def SelectClass(symbol, modifiers):
+def on_key_press(symbol, modifiers):
    ClassScreen().SelectClass(label)
 
 pyglet.app.run()

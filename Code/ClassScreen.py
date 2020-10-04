@@ -5,4 +5,4 @@ class ClassScreen:
     
     @staticmethod
     def SelectClass(label):
-        label.text = "Hey"
+        label.text = "Hello"
