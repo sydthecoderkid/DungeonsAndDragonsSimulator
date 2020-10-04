@@ -4,5 +4,5 @@ from pyglet.window import key
 class ClassScreen:
     
     @staticmethod
-    def printthing():
-        print("helloworld")
+    def SelectClass(label):
+        label.text = "Hey"
