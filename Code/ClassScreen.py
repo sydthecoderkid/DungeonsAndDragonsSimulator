@@ -6,16 +6,13 @@ class ClassScreen:
 
 
     def __init__(self, textlabel, alphacolor): 
+
         self.textlabel = textlabel
         self.alphacolor = alphacolor
-        fader = FadeText.FadeText(textlabel, alphacolor)
-        fader.fadeText(textlabel)
+        fader = FadeText.fadeText(textlabel)
+        fader.fadeText()
 
 
     
-    @staticmethod
-    def SelectClass(label):
-        #FadeText.fadeText(self, label)
-        label.text = "Hello Adventurer! "
- 
+   
 
