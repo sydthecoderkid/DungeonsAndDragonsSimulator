@@ -9,8 +9,16 @@ class ClassScreen:
 
         self.textlabel = textlabel
         self.alphacolor = alphacolor
-        fader = FadeText.fadeText(textlabel)
-        fader.fadeText()
+
+        self.fader = FadeText.fadeTextClass(textlabel)
+        self.fader.fadeText(False, textlabel.text)
+
+
+    def SelectClass(self):
+        self.textlabel.color = (255,255,255,0)
+        self.textlabel.text = "Select a class"
+        self.fader.fadeText(True, self.textlabel.text)
+       
 
 
     
