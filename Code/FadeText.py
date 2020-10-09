@@ -10,7 +10,6 @@ class fadeTextClass:
     
 
     def fadeText(self, fadingin, labeltext):
-        self.label.text = labeltext
         fadetime = 0.073
         if not fadingin:
             pyglet.clock.schedule_interval(self.fadeOut, fadetime)
@@ -41,7 +40,7 @@ class fadeTextClass:
         self.alphacolor += 5
         textholder = self.label.text
         self.label.text = textholder
-        self.label.color(255,255,255, self.alphacolor)
+        self.label.color = (255,255,255, self.alphacolor)
 
        
  

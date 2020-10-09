@@ -17,8 +17,7 @@ def on_draw():
 @window.event
 def on_key_press(symbol, modifiers):
    screen = ClassScreen(label, 255)
-
-   pyglet.clock.schedule_once(ClassScreen.SelectClass, 1) 
+   pyglet.clock.schedule_once(ClassScreen.SelectClass, 1)
    
    
 pyglet.app.run()

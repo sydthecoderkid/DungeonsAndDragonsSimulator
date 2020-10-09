@@ -3,21 +3,22 @@ import FadeText
 from pyglet.window import key
 
 class ClassScreen:
-
+    thisscreen = None
 
     def __init__(self, textlabel, alphacolor): 
 
         self.textlabel = textlabel
         self.alphacolor = alphacolor
-
+        print(self.textlabel.text)
         self.fader = FadeText.fadeTextClass(textlabel)
-        self.fader.fadeText(False, textlabel.text)
+        self.fader.fadeText(False, textlabel)
+        global thisscreen
+        thisscreen = self
 
 
     def SelectClass(self):
-        self.textlabel.color = (255,255,255,0)
-        self.textlabel.text = "Select a class"
-        self.fader.fadeText(True, self.textlabel.text)
+        global thisscreen
+        thisscreen.fader.fadeText(True, thisscreen.textlabel)
        
 
 
